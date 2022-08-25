@@ -4,7 +4,10 @@
     box-sizing: border-box;
 }
 
-body, input, button, textarea {
+body,
+input,
+select,
+textarea {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -31,6 +34,7 @@ body::before {
 
 header {
     width: 319px;
+
     margin-top: 74px;
 }
 
@@ -53,13 +57,13 @@ header p {
 
 form {
     margin-top: 38px;
-    background: #FAFAFC;
     min-height: 300px;
-    border-radius: 8px;
+    background: #FAFAFC;
+    border-radius: 8px 8px 0 0;
 
     padding: 64px;
 
-    display: contents;
+    display: flex;
     flex-direction: column;
     gap: 48px;
 }
@@ -85,8 +89,7 @@ fieldse legend {
     padding-bottom: 16px;
 }
 
-.input-wrapper,
-.checkbox-wrapper {
+.input-wrapper {
     display: flex;
     flex-direction: column;
 }
@@ -114,7 +117,7 @@ fieldse legend {
     color: #6c6a71;
 }
 
-.input-wrapper input, 
+.input-wrapper input,
 .input-wrapper textarea,
 .input-wrapper select {
     background: #FAFAFC;
@@ -143,7 +146,7 @@ fieldse legend {
 
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
-    background-position: 24px top center;
+    background-position: right 24px top center;
 }
 
 .col-3 {
@@ -163,14 +166,14 @@ fieldse legend {
     display: flex;
     align-items: center;
     gap: 16px;
-    
+
     margin: 0;
 }
 
 .checkbox-wrapper input {
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
     width: 24px;
     height: 24px;
 
@@ -192,10 +195,45 @@ fieldse legend {
 }
 
 .checkbox-wrapper input:focus + label::before {
-outline: 2px solid black;
+    outline: 2px solid black;
 }
 
-.form-buttons {
+footer {
     background: #F0F0F4;
+
+    height: 136px;
+
+    display: flex;
+    flex-direction: column;
+    
+    padding: 40px 64px;
+
+    margin-bottom: 100px;
+
+    border-top: 1px solid #D6D6D6;
+    border-radius: 0 0 8px 8px;
 }
 
+footer .button {
+    height: 56px;
+    background: #04D361;
+    border: 0;
+    border-radius: 8px;
+
+    font-family: 'Archivo';
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+
+    color: #FFFFFF;
+}
+
+footer .button:hover {
+    background: #08a04c;
+    transform: 7s;
+}
+
+input:invalid {
+    border: 2px solid #FF1010;
+}
