@@ -13,3 +13,6 @@ Challenge developed by myself with HTML and CSS, [based on this layout:](https:/
 
 
 <img src="https://i.imgur.com/92DUKEo.png" alt="layout" style="height: 350px; width: auto">
+
+### html-css-form-advanced
+Project with advanced concepts of HTML and CSS using forms, [see the layout here](https://www.figma.com/file/JCLCt173ps9Fd3pgK7RxvD/Explorer-Stage-03-Projeto-01-(Copy)?node-id=0%3A1).
