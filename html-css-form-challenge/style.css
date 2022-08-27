@@ -2,14 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
 
+body, input, button, select, textarea {
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-
     background: #E5E5E5;
-
 }
 
 body::before {
@@ -22,6 +22,7 @@ body::before {
     top: 0;
     z-index: -1;
     background: #535971;
+    box-shadow:9px 4px 4px black;
     }
 
 
@@ -56,7 +57,7 @@ p {
 form {
     position: absolute;
     width: 750px;
-    height: 1084%;
+    height: 1084px;
     left: 345px;
     top: 320px;
 
@@ -64,10 +65,20 @@ form {
     border-radius: 20px 20px 0 0;
 
     padding: 64px;
+
+    display: flex;
+    flex-direction: column;
+    gap:31px;
 }
 
 fieldset {
     border: none;
+}
+
+.fieldset-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
 }
 
 legend {
@@ -83,31 +94,88 @@ legend {
     padding-bottom: 16px;
 }
 
-.input-wapper {
+.input-wrapper {
     display: flex;
     flex-direction: column;
 }
 
-.input-wapper label {
+.input-wrapper label {
     font-size: 14px;
     line-height: 24px;
 
     color: #4E4958;
-
     margin-bottom: 8px;
 }
 
-.input-wapper input {
-    border: 1px solid #E6E6F0;
-    border-radius: 8px;
-    Width: 300px;
-    Height: 56px;
+.input-wrapper label span {
+    margin-left: 10px;
+    color: #8a8792;
+}
 
-    background: #FAFAFC;
+.input-wrapper label span:hover {
+    color: #706690
 }
 
 .col-2 {
     display: flex;
     gap: 20px;
 }
+
+.col-2 input{
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+    Width: 300px;
+    Height: 56px;
+
+    background: #FAFAFC;
+
+    padding: 0 24px;
+
+    font-size: 16px;
+    line-height: 25px;
+    box-shadow: 4px 2px 2px black;
+}
+
+.col-2 > div:nth-child(1) {
+    width: 100%;
+}
+
+footer {
+    position: absolute;
+    width: 750px;
+    height: 160px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 50px 70px;
+    background: #535971;
+    border-radius: 0px 0px 20px 20px;
+    margin-bottom: 366px;
+    }
+
+  footer .button  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 40px;
+    gap: 10px;
+    
+    position: absolute;
+    width: 608px;
+    height: 55px;
+    left: 416px;
+    top: 1456.67px;
+    
+    background: #FF5374;
+    border-radius: 20px;
+  }   
+
+  .button:hover {
+    background: #e23356;
+  }
+  
+
+
 
