@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 
-body, input, button, select, textarea {
+body,
+input,
+button {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -17,13 +19,18 @@ body::before {
     position: absolute;
     width: 100%;
     height: 436px;
-  
+
     left: 0;
     top: 0;
     z-index: -1;
     background: #535971;
-    box-shadow:9px 4px 4px black;
-    }
+    box-shadow: 4px 2px 2px black;
+}
+
+.page {
+    width: 750px;
+    margin: auto;
+}
 
 
 h1 {
@@ -68,7 +75,7 @@ form {
 
     display: flex;
     flex-direction: column;
-    gap:31px;
+    gap: 31px;
 }
 
 fieldset {
@@ -81,7 +88,7 @@ fieldset {
     gap: 22px;
 }
 
-legend {
+fieldset legend {
     font-family: 'Staatliches';
     font-weight: 400;
     font-size: 24px;
@@ -109,7 +116,28 @@ legend {
 
 .input-wrapper label span {
     margin-left: 10px;
+
+    font-size: 14px;
+    line-height: 24px;
+
     color: #8a8792;
+}
+
+.input-wrapper input {
+    width: 622px;
+    height: 56px;
+    top: 606px;
+    left: 409px;
+    padding: 8px;
+
+    background: #FAFAFC;
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+    box-shadow: 4px 2px 2px black;
+}
+
+input::-webkit-calendar-picker-indicator {
+    display: none;
 }
 
 .input-wrapper label span:hover {
@@ -121,11 +149,11 @@ legend {
     gap: 20px;
 }
 
-.col-2 input{
+.col-2 input {
     border: 1px solid #E6E6F0;
     border-radius: 8px;
-    Width: 300px;
-    Height: 56px;
+    width: 300px;
+    height: 56px;
 
     background: #FAFAFC;
 
@@ -136,13 +164,37 @@ legend {
     box-shadow: 4px 2px 2px black;
 }
 
-.col-2 > div:nth-child(1) {
+.col-2>div:nth-child(1) {
     width: 100%;
 }
 
+.mentor {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.mentor input {
+    width: 300px;
+    height: 56px;
+    top: 0;
+    left: 0;
+    padding: 8px;
+    font-size: 16px;
+    line-height: 25px;
+
+    background: #FAFAFC;
+
+    border-radius: 8px;
+    border: 1px solid #E6E6F0;
+    
+}
+
+.mentor>div:nth-child(1) {
+    width: 100%;
+} 
+
 footer {
-    position: absolute;
-    width: 750px;
     height: 160px;
 
     display: flex;
@@ -152,30 +204,22 @@ footer {
     background: #535971;
     border-radius: 0px 0px 20px 20px;
     margin-bottom: 366px;
-    }
+}
 
-  footer .button  {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 40px;
-    gap: 10px;
-    
-    position: absolute;
-    width: 608px;
+footer .button {
     height: 55px;
-    left: 416px;
-    top: 1456.67px;
-    
     background: #FF5374;
+    border: none;
     border-radius: 20px;
-  }   
+    cursor: pointer;
 
-  .button:hover {
+    font-family: 'Staatliches', cursive;
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.button:hover {
     background: #e23356;
-  }
-  
-
-
-
+}
