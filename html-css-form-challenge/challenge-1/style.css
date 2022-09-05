@@ -37,6 +37,38 @@ header {
     width: 417px;
 }
 
+nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-top: 25px;
+    margin-right: 25px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #F67669;
+}
+
+nav img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 8px;
+}
+
+nav figure {
+    height: 200px;
+    width: auto;
+    transition: 0.3s;
+}
+
+nav figure:hover {
+    height: 210px;
+    width: auto;
+    color: #e26f63;
+}
 
 h1 {
     font-family: 'Staatliches', sans-serif;
