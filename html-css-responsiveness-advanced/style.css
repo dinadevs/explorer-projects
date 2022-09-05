@@ -81,15 +81,17 @@ ul li {
 
 
 ul li + li {
-    margin-bottom: 3.2rem;
+    margin-top: 3.2rem;
 }
 
 ul li span {
     font-weight: 800;
     font-size: 7.2rem;
 
+    flex-basis: 47px;
+    flex-shrink:0;
+
     line-height: 8.0rem;
-    letter-spacing: -2px;
 
     color: #090039;
 }
