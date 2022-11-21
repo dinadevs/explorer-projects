@@ -1,76 +1,210 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    font-size: 62.5%;
-    --ff-heading: "Staatliches", sans-serif;
-    --ff-texting: "Palanquin", sans-serif;
+  font-size: 62.5%;
+  --ff-heading: "Staatliches", sans-serif;
+  --ff-texting: "Palanquin", sans-serif;
 }
 
 body {
-    font-family: var(--ff-heading);
+  font-family: var(--ff-heading);
+  background: #EFF1FF;
+  height: 100vh;
 }
 
-header {
-    background: #8E9AAF;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3.2rem;
-    padding: 3.2rem 0 2.9rem;
+.page {
+  display: grid;
+  height: 100%;
+}
+
+.presentation {
+  background: #8E9AAF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+  padding: 3.2rem 0 2.9rem;
+}
+
+.logoDesktop {
+  display: none;
+}
+
+.presentation p {
+  display: none;
+  font-family: "Roboto", sans-serif;
+  color: #FFF;
+  text-align: center;
+  font-size: clamp(1.3rem, 0.5rem + 1vw, 1.6rem);
+  line-height: clamp(1.8rem, 0.5rem + 1vw, 2.5rem);
 }
 
 h1 {
-    font-size: 4.0rem;
-    color: #FFF;
-    background: #CBC0D3;
-    padding: 0.8rem 0 0.8rem;
-    width: 100%;
-    text-align: center;
-    letter-spacing: 0.8px;
-    font-weight: 400;
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  font-size: clamp(3rem, 0.5rem + 3vw, 4rem);
+  color: #FFF;
+  background: #CBC0D3;
+  padding: 0.8rem 0 0.8rem;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.8px;
+  font-weight: 400;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
 main {
-    background: #EFF1FF;
-    padding: 2.6rem 3.2rem 6.0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.6rem 3.2rem 6rem;
 }
 
-p {
-    font-family: var(--ff-texting);
-    color: #23053A;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    text-align: center;
-    margin-bottom: 5.4rem;
+main p {
+  font-family: var(--ff-texting);
+  color: #23053A;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  margin-bottom: 5.4rem;
 }
 
 .cards {
-    display: grid;
-    gap: 3.2rem;
-    position: relative;
+  display: grid;
+  gap: 3.2rem;
+  position: relative;
+}
+
+.cards :nth-child(5),
+:nth-child(6) {
+  display: none;
 }
 
 .card {
-    position: relative;
+  position: relative;
 }
 
 .card img {
-    object-fit: cover;
-    width: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
 h2 {
-    color: #4A4E69;
-    background: #FEEAFA;
-    padding: 1.0rem 2.4rem;
-    width: fit-content;
-    position: absolute;
-    top: 1.6rem;
-    right: 1.6rem;
-    border-radius: 2.0rem;
+  color: #4A4E69;
+  background: #FEEAFA;
+  padding: 0.8rem 2.4rem;
+  display: inline;
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  letter-spacing: 0.8px;
+  font-weight: 400;
+  border-radius: 2rem;
+  font-size: 2rem;
+}
+
+footer {
+  display: none;
+  font-family: "Open Sans", sans-serif;
+  color: #4A4E69;
+  font-size: 1.4rem;
+  margin-top: 5rem;
+}
+
+footer a {
+  text-decoration: none;
+  margin-left: 2px;
+  color: #4A4E69;
+  font-weight: bold;
+}
+
+@media (min-width: 700px) {
+  .page {
+    grid-template-columns: clamp(25rem, 17rem + 15vw, 38rem) auto;
+  }
+
+  .logoMobile {
+    display: none;
+  }
+
+  .logoDesktop {
+    display: inherit;
+    width: 60%;
+  }
+
+  .presentation p {
+    display: inherit;
+    padding: 0 4rem 0;
+    margin-top: 2rem;
+  }
+
+  main p:first-child {
+    display: none;
+  }
+
+  .cards {
+    grid-template-areas:
+      "A B"
+      "D B"
+      "D E";
+  }
+
+  .card img {
+    max-width: 220px;
+  }
+
+  .card:nth-child(1) {
+    grid-area: A;
+  }
+
+  .card:nth-child(2) {
+    grid-area: B;
+  }
+
+  .card:nth-child(3) {
+    grid-area: E;
+  }
+
+  .card:nth-child(4) {
+    grid-area: D;
+  }
+
+  h2 {
+    display: none;
+  }
+
+  footer {
+    display: inherit;
+  }
+}
+
+@media (min-width: 1000px) {
+  .presentation p {
+    padding: 0 5.4rem 0;
+    margin-top: 3.2rem;
+  }
+
+  main {
+    padding: 6.4rem 9.7rem 4.6rem;
+  }
+
+  .cards {
+    grid-template-areas:
+      "A B C"
+      "D B F"
+      "D E F";
+  }
+
+  .card:nth-child(5) {
+    grid-area: C;
+    display: inherit;
+  }
+
+  .card:nth-child(6) {
+    grid-area: F;
+    display: inherit;
+  }
 }
