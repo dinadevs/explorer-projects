@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-heading: 'Staatliches', sans-serif;
+  --ff-texting: 'Palanquin', sans-serif;
+  --ff-footer: 'Open Sans', sans-serif;
+
+  --bg-primary: #8e9aaf;
+ 
+  --lb-primary: #f0f1ff;
+
+  --bg-secondary: #cbc0d3;
+
+  --fh-primary: #ffffff;
+  --bt-primary: #feecfa;
+  --ft-primary: #220538;
+  --ft-secondary: #4a4e68;
+
+  font-size: 62.5%;
+  --fs-body: 2rem;
+  --fs-heading: 4rem;
+}
+
+body {
+  font-family: var(--ff-texting);
+  font-size: var(--fs-body);
+}
+
+h1 {
+  
+  font-size: var(--fs-heading);
+  color: var(--fh-primary);
+  padding: 0.8rem 0;
+  text-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.25);
+
+  margin-bottom: 2.9rem;
+  background: var(--bg-secondary);
+}
+
+h1, span {
+  font-family: var(--ff-heading);
+  letter-spacing: 0.05rem;
+  font-weight: 400;
+  line-height: 3.4rem;
+  text-align: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page {
+  margin: 0 auto ;
+  max-width: 38.4rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+
+  background: var(--bg-primary);
+}
+
+.logoMobile {
+  width: 21.4rem;
+  height: 16.7rem;
+  margin: 3.2rem auto;
+}
+
+.about {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--ft-primary);
+
+  display: flex;
+  text-align: center;
+  padding: 1.4rem 3.2rem 0;
+}
+
+.imgCards {
+  display: grid;
+  gap: 3.2rem;
+  padding: 6.0rem 3.2rem;
+}
+
+.card {
+  position: relative;
+  width: 32.0rem;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 2rem;
+
+  object-fit: cover;
+}
+
+.card span {
+  color: var(--ft-secondary);
+  width: 11.2rem;
+  height: 3.5rem;
+  
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  background: var(--bt-primary);
+  border-radius: 2rem;
+}
+
+.logoDesktop,
+.aboutDesktop,
+footer {
+  display: none;
+}
+
+/* @media (min-width: 700px) {
+  :root {
+    --fs-heading: 4.8rem;
+  }
+
+  body {
+    display: flex;
+    max-width: 1280px;
+  }
+
+  .headerMobile {
+    width: 37.7rem;
+    height: 72.0rem;
+    
+    background: #8E9AAF;
+  }
+
+  .about {
+    --fh-primary: #ffffff;
+    font-size: 2.4rem;
+    max-width: 117rem;
+    }
+
+  main {
+    justify-content: space-between;
+  }
+
+  aside {
+    display: block;
+  }
+
+  .logoMobile,
+  .aboutMobile,
+  span {
+    display: none;
+  }
+
+  .logoDesktop {
+    max-width: 100%;
+    display: inline-block;
+  }
+
+  .aboutDesktop {
+    display: inline-block;
+    max-width: 100%;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 2rem;
+    text-align: center;
+    margin: 3.2rem 5rem 0;
+  }
+
+
+  .card {
+    display: grid;
+    gap: 3.2rem;
+    padding: 5rem 5rem;
+  }
+
+  footer {
+    font-family: var(--ff-footer);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    color: #4A4E69;
+
+    text-align: center;
+  }
+
+  footer span {
+    font-weight: bold;
+  }
+
+} */
