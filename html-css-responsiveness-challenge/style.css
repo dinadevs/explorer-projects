@@ -53,6 +53,9 @@ h1 {
   letter-spacing: 0.8px;
   font-weight: 400;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+  
+  animation: top 700ms 350ms backwards;
 }
 
 main {
@@ -90,12 +93,44 @@ main p {
 .card img {
   object-fit: cover;
   width: 100%;
+
+  animation: top 700ms;
+  animation-direction: reverse;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+@keyframes top {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes top {
+  0% {
+      opacity: 0;
+      transform: translateY(15px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 h2 {
   color: #4A4E69;
   background: #FEEAFA;
-  padding: 0.8rem 2.4rem;
+  padding: 0.4rem 2rem;
   display: inline;
   position: absolute;
   top: 1.6rem;
@@ -104,6 +139,8 @@ h2 {
   font-weight: 400;
   border-radius: 2rem;
   font-size: 2rem;
+
+  animation: top 700ms 350ms backwards;
 }
 
 footer {
@@ -112,6 +149,9 @@ footer {
   color: #4A4E69;
   font-size: 1.4rem;
   margin-top: 5rem;
+
+  animation: top 700ms 350ms backwards;
+  animation-direction: reverse;
 }
 
 footer a {
@@ -154,6 +194,8 @@ footer a {
 
   .card img {
     max-width: 220px;
+    animation: top 700ms 350ms backwards;
+    
   }
 
   .card:nth-child(1) {
