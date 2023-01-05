@@ -26,6 +26,15 @@ Project with advanced concepts of HTML and CSS using responsiveness and animatio
 
 ***
 
+### js-basics
+Basic JavaScript concepts such as variables, operators, data types,
+ repeating and conditional structures, arrays and functions.
+ 
+### js-dom-basics
+Project with concepts of HTML, CSS and the basics of JavaScript, [see the layout here](https://www.figma.com/file/Co2fFEUgqizJaBHxsUA2J3/Jogo-Adivinhação-(Copy)?node-id=0%3A1&t=fNAEYd0rDPMPRspX-0).
+ 
+***
+
 ### :dart: html-css-page-challenge
 Challenge developed by myself with HTML and CSS, [based on this layout:](https://www.figma.com/file/FPmoIXpdTu6zTUSamkFAkt/Explorer-(Copy)?node-id=0%3A1)
 
@@ -55,6 +64,8 @@ Challenge developed by myself with HTML and CSS, based on those layouts:
   <img src="https://i.imgur.com/UXqLqzd.png" alt="layout" style="height: 300px; width: auto">
   <img src="https://i.imgur.com/nkkHGYv.png" alt="layout" style="height: 300px; width: auto">
 </div>
+
+
 
 
 
