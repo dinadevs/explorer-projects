@@ -7,7 +7,7 @@
 :root  {
     font-size: 62.5%;
 
-    --tt-headind: #0C3440; /*Titulo */
+    --tt-headind: #0d3440; /*Titulo */
 
     --tt-label: #00453A; /*label do input */
     --tt-input: #212529; /*input */
@@ -17,7 +17,7 @@
     --bg-input: #DCE2E9; /*background input */
     
     --tt-button: white; /*button */
-    --bg-buttton: #02799D; /*background button */ 
+    --bg-button: #02799D; /*background button */ 
     --bt-hover: #05536b;
     
     --bg-error: #F03E3E;
@@ -53,10 +53,18 @@ body, input, button {
 }
 
 .title  {
-    font-size: 3.2rem;
+    font-size: 3.8rem;
     line-height: 4rem;
     color: var(--tt-headind);
-    display: block;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.imc {
+    width: 35%;
 }
 
 form {
@@ -114,7 +122,7 @@ form button {
 
     cursor: pointer;
 
-    transition: background .3s;
+    transition: .3s;
 }
 
 form button:hover {
@@ -122,6 +130,10 @@ form button:hover {
 }
 
 /*modal*/
+span {
+    font-size: 3.2rem;
+}
+
 .modal-wrapper.open {
     opacity: 1;
     visibility: visible;

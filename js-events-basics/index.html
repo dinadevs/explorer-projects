@@ -1,66 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Calculadora de IMC</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <script src="./script.js" defer></script>
-
-</head>
-<body>
-
-    <div class="alertErro">
-        Digite somente números  
-    </div>
+  </head>
+  <body>
+    <div class="alertErro">Digite somente números</div>
 
     <div class="container">
-        <main class="card">
-            <form>
-                <h1 class="title">Cálculo de IMC</h1>
-                    <div class="inputWrapper">
-                        <label for="weight">Peso (kg)</label>
-                        <input 
-                            id="weight" 
-                            type="text"
-                            placeholder="60"/>
-                    </div>
+      <main class="card">
+        <form>
+          <h1 class="title">Cálculo de 
+            <img class="imc"
+            src="./assets/imc.png"
+            alt=""
+            />
+          </h1>
+          <div class="inputWrapper">
+            <label for="weight">Peso (kg)</label>
+            <input id="weight" type="text" placeholder="60" />
+          </div>
 
-                    <div class="inputWrapper">
-                        <label for="height">Altura (cm)</label>
-                        <input 
-                            id="height" 
-                            type="text"
-                            placeholder="165"/>
-                    </div>
+          <div class="inputWrapper">
+            <label for="height">Altura (cm)</label>
+            <input id="height" type="text" placeholder="165" />
+          </div>
 
-                    <button type="submit">Calcular IMC
-                        <img src="./assets/arrow.svg" alt="seta para direita">
-                    </button>
-            </form>
-    
-        </main>
+          <button type="submit">
+            Calcular IMC
+            <img src="./assets/arrow.svg" alt="seta para direita" />
+          </button>
+        </form>
+      </main>
     </div>
-    
+
     <div class="modal-wrapper">
-        <div class="modal card">
-            <h2 class="title">
-
-                <button class="close">
-                    <img src="./assets/close.svg" alt=" imagem de um x para fechar o popup">
-                </button>
-                <span>Seu IMC é de 28</span>
-            </h2>
-        </div>
+      <div class="modal card">
+        <h2 class="title">
+          <button class="close">
+            <img
+              src="./assets/close.svg"
+              alt=" imagem de um x para fechar o popup"
+            />
+          </button>
+          <span>Seu IMC é de 28</span>
+        </h2>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>
