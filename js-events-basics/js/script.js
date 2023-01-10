@@ -1,10 +1,14 @@
-import { Modal} from './modal.js'  //importa do modal
+import { Modal } from "./modal.js"  //importa o modal
+import { AlertError } from "./alertErro.js"
+import { calculeteIMC, notANumber } from "./utils.js"
 
-//variables
 const form = document.querySelector('form') 
-// faça uma pesquisa pelo seletor
+//pesquisa pelo seletor
 const inputWeight = document.querySelector('#weight')
 const inputHeight = document.querySelector('#height')
+
+inputHeight.oninput =() => AlertError.close()
+inputWeight.oninput =() => AlertError.close()
 
 form.onsubmit = event => {
     event.preventDefault()
@@ -12,13 +16,26 @@ form.onsubmit = event => {
     const weight = inputWeight.value
     const height = inputHeight.value
 
-    const result = IMC(weight, height)
+    const weightOrHeightIsNotANumber = notANumber(weight) || notANumber(height)
+
+    if(weightOrHeightIsNotANumber) {
+        AlertError.open()
+        return;
+    }
+
+    AlertError.close()
+
+    const result = calculeteIMC(weight, height)
+    displayResultMessage(result)
+} 
+
+function displayResultMessage(result) {
     const message = `Seu IMC é de ${result}`
 
     Modal.message.innerText = message
     Modal.open()
-} 
-
-function IMC(weight, height) {
-    return (weight / ((height / 100) ** 2)).toFixed(2)
 }
+
+
+
+
