@@ -32,6 +32,9 @@ Basic JavaScript concepts such as variables, operators, data types,
  
 ### js-dom-basics
 Project with concepts of HTML, CSS and the basics of JavaScript, [see the layout here](https://www.figma.com/file/Co2fFEUgqizJaBHxsUA2J3/Jogo-Adivinhação-(Copy)?node-id=0%3A1&t=fNAEYd0rDPMPRspX-0).
+
+### js-events-basics
+Project with concepts of HTML, CSS and ES-Modules in JavaScript, [see the layout here](https://www.figma.com/file/vGNcs1b0OUXdQddXv0y8RF/IMC-(Copy)?node-id=6%3A4&t=s6yR6IvjJeTCX4gz-0).
  
 ***
 
