@@ -31,14 +31,14 @@ main {
   justify-self: center;
 }
 
-.timer {
+#timer {
   font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
  
   display: flex;
   padding-bottom: 1.6rem;
 }
 
-.controls {
+#controls {
   background: var(--bg-button);
   border-radius: 9999px;
 
@@ -48,6 +48,7 @@ main {
   gap:  3.2rem;
 
   width: clamp(10rem, 10rem + 30vw, 22.8rem);
+  height: clamp(8rem, 5rem + 3vw, 10.8rem)
 }
 
 .play svg path,

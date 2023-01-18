@@ -16,12 +16,12 @@ export default function Controls({
     buttonPause.classList.add('hide')
     buttonPlay.classList.remove('hide')
   }
-
+  
   function reset() {
-    buttonPause.classList.add('hide')
     buttonPlay.classList.remove('hide')
-    buttonStop.classList.add('hide')
+    buttonPause.classList.add('hide')
     buttonSet.classList.remove('hide')
+    buttonStop.classList.add('hide')
   }
 
   function getMinutes() {
@@ -34,10 +34,9 @@ export default function Controls({
   }
 
   return {
-   reset,
-   play,
-   pause,
-   getMinutes
+    reset,
+    play,
+    pause,
+    getMinutes
   }
 }
-
