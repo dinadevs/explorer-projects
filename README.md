@@ -35,6 +35,9 @@ Project with concepts of HTML, CSS and the basics of JavaScript, [see the layout
 
 ### js-events-basics
 Project with concepts of HTML, CSS and ES-Modules in JavaScript, [see the layout here](https://www.figma.com/file/vGNcs1b0OUXdQddXv0y8RF/IMC-(Copy)?node-id=6%3A4&t=s6yR6IvjJeTCX4gz-0).
+
+### js-module-intermediates
+Project mainly with concepts of events, modules, timeouts, factories and dependency injection, [see the layout here](https://www.figma.com/file/v4eQikUXBATiC95tyaEY9Z/Explorer-Stage-05-Projeto-01-(Copy)?type=design&t=dlTZmK9qd2rXpDUG-0).
  
 ***
 
