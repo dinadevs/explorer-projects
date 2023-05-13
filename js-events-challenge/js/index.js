@@ -14,14 +14,14 @@ const buttonTheme = document.querySelector('.toggleTheme')
 const svgSun = document.querySelector('.svgSun')
 const svgMoon = document.querySelector('.svgMoon')
 const root = document.querySelector(':root')
- 
+
 
 // ADICIONAR EVENTO
 
 // adicionar um eventListener no botao de toggleTheme
 // vigiar o evento click
 
-buttonTheme.addEventListener('click', function() {
+buttonTheme.addEventListener('click', function () {
 
   // QUANDO ACONTECER O CLIQUE
 
@@ -54,28 +54,39 @@ const audioForest = new Audio('../assets/Floresta.wav');
 const audioRain = new Audio('../assets/Chuva.wav');
 const audioCoffee = new Audio('../assets/Cafeteria.wav');
 const audioFireplace = new Audio('../assets/Lareira.wav');
+const sliderForest = buttonForest.querySelector('input');
+const sliderRain = buttonRain.querySelector('input');
+const sliderCoffee = buttonCoffee.querySelector('input');
+const sliderFireplace = buttonFireplace.querySelector('input');
+
+audioForest.loop = true;
+audioCoffee.loop = true;
+audioFireplace.loop = true;
+audioRain.loop = true;
 
 // ADICIONAR EVENTO
 
 // adicionar um eventListener em cada um dos botoes
 // vigiar o evento click
 
-  // QUANDO ACONTECER O CLIQUE
+// QUANDO ACONTECER O CLIQUE
 
-  // tem que selecionar o que eu cliquei
-  // começar ou parar o som do que foi clicado
-  // e "desselecionar" todos os outros
-  // parar o som dos outros
+// tem que selecionar o que eu cliquei
+// começar ou parar o som do que foi clicado
+// e "desselecionar" todos os outros
+// parar o som dos outros
 
-  buttonForest.addEventListener('click', handleForestButtonClick)
-  buttonRain.addEventListener('click', handleRainButtonClick)
-  buttonCoffee.addEventListener('click', handleCoffeeButtonClick)
-  buttonFireplace.addEventListener('click', handleFireplaceButtonClick)
+buttonForest.addEventListener('click', handleForestButtonClick)
+buttonRain.addEventListener('click', handleRainButtonClick)
+buttonCoffee.addEventListener('click', handleCoffeeButtonClick)
+buttonFireplace.addEventListener('click', handleFireplaceButtonClick)
 
-  function handleForestButtonClick () {
+function handleForestButtonClick(e) {
+
+  if (e.target != sliderForest) {
 
     this.classList.toggle('selected')
-    if(audioForest.paused == true) {
+    if (audioForest.paused == true) {
       audioCoffee.pause()
       audioFireplace.pause()
       audioRain.pause()
@@ -85,16 +96,18 @@ const audioFireplace = new Audio('../assets/Lareira.wav');
     }
 
     soundButtonsList.forEach(button => {
-      if(button != this) {
+      if (button != this) {
         button.classList.remove('selected')
       }
     });
   }
+}
 
-  function handleRainButtonClick() {
+function handleRainButtonClick(e) {
 
+  if (e.target != sliderRain) {
     this.classList.toggle('selected')
-    if(audioRain.paused == true) {
+    if (audioRain.paused == true) {
       audioCoffee.pause()
       audioFireplace.pause()
       audioForest.pause()
@@ -103,17 +116,19 @@ const audioFireplace = new Audio('../assets/Lareira.wav');
       audioRain.pause()
     }
     soundButtonsList.forEach(button => {
-      if(button != this) {
+      if (button != this) {
         button.classList.remove('selected')
       }
     });
   }
+}
 
-  function handleCoffeeButtonClick() {
+function handleCoffeeButtonClick(e) {
 
+  if (e.target != sliderCoffee) {
     this.classList.toggle('selected')
-    
-    if(audioCoffee.paused == true) {
+
+    if (audioCoffee.paused == true) {
       audioRain.pause()
       audioFireplace.pause()
       audioForest.pause()
@@ -122,17 +137,19 @@ const audioFireplace = new Audio('../assets/Lareira.wav');
       audioCoffee.pause()
     }
     soundButtonsList.forEach(button => {
-      if(button != this) {
+      if (button != this) {
         button.classList.remove('selected')
       }
     });
   }
-  
-  function handleFireplaceButtonClick() {
+}
 
+function handleFireplaceButtonClick(e) {
+
+  if (e.target != sliderFireplace) {
     this.classList.toggle('selected')
 
-    if(audioFireplace.paused == true) {
+    if (audioFireplace.paused == true) {
       audioCoffee.pause()
       audioRain.pause()
       audioForest.pause()
@@ -141,11 +158,55 @@ const audioFireplace = new Audio('../assets/Lareira.wav');
       audioFireplace.pause()
     }
     soundButtonsList.forEach(button => {
-      if(button != this) {
+      if (button != this) {
         button.classList.remove('selected')
       }
     });
   }
+}
+sliderForest.addEventListener('change', handleForestSliderChange);
+sliderRain.addEventListener('change', handleRainSliderChange);
+sliderCoffee.addEventListener('change', handleCoffeeSliderChange);
+sliderFireplace.addEventListener('change', handleFireplaceSliderChange);
 
-   
+function handleForestSliderChange(e) {
+  audioForest.volume = e.currentTarget.value / 100;
+}
 
+function handleRainSliderChange(e) {
+  audioRain.volume = e.currentTarget.value / 100;
+}
+
+function handleCoffeeSliderChange(e) {
+  audioCoffee.volume = e.currentTarget.value / 100;
+}
+
+function handleFireplaceSliderChange(e) {
+  audioFireplace.volume = e.currentTarget.value / 100;
+}
+
+
+// *****    CONTROLE MAIS E MENOS DOS MINUTOS  ******
+
+const displayMinutes = document.querySelector('.minutes')
+let minutes
+
+const buttonPlus = document.querySelector('.plusButton')
+const buttonMinus = document.querySelector('.minusButton')
+
+buttonMinus.addEventListener('click', handleButtonMinusClick)
+buttonPlus.addEventListener('click', handleButtonPlusClick)
+
+function handleButtonMinusClick() {
+  minutes = Number(displayMinutes.textContent)
+  
+  if(minutes > 0) {
+    displayMinutes.textContent = String(minutes - 5).padStart(2, '0')
+  }
+}
+
+function handleButtonPlusClick() {
+  minutes = Number(displayMinutes.textContent)
+  
+  displayMinutes.textContent = String(minutes + 5).padStart(2, '0')
+}
