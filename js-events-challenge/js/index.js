@@ -210,3 +210,48 @@ function handleButtonPlusClick() {
   
   displayMinutes.textContent = String(minutes + 5).padStart(2, '0')
 }
+
+
+// *****    CONTROLE PLAY E STOP / CONTAGEM  ******
+
+// fazer o botão play funcionar
+
+const buttonPlay = document.querySelector('.playButton')
+
+buttonPlay.addEventListener('click', handleButtonPlayClick)
+
+function handleButtonPlayClick() {
+  countdown()
+}
+
+// fazer uma função de timeout que diminui os segundos
+  // pegar os segundos da tela
+  // diminuir 1
+  // atualizar o segundo da tela
+  // faz de novo
+
+  let timerTimeOut
+  const displaySeconds = document.querySelector('.seconds')
+  let seconds
+   
+function countdown() {
+  timerTimeOut = setTimeout(function() {
+    seconds = Number(displaySeconds.textContent)
+    if(seconds == 0) {
+      seconds = 60
+    }
+
+    displaySeconds.textContent = String(seconds - 1).padStart(2, '0')
+
+    countdown()
+
+  }, 1000)
+
+  
+}
+
+// fazer diminuir também os minutos
+// fazer a função parar quando o tempo acaba
+// fazer o botão stop funcionar
+// consertar problemas
+// colocar áudio do fim
