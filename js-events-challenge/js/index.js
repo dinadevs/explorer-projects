@@ -58,6 +58,7 @@ const sliderForest = buttonForest.querySelector('input');
 const sliderRain = buttonRain.querySelector('input');
 const sliderCoffee = buttonCoffee.querySelector('input');
 const sliderFireplace = buttonFireplace.querySelector('input');
+const audioAlert = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true")
 
 audioForest.loop = true;
 audioCoffee.loop = true;
@@ -80,6 +81,7 @@ buttonForest.addEventListener('click', handleForestButtonClick)
 buttonRain.addEventListener('click', handleRainButtonClick)
 buttonCoffee.addEventListener('click', handleCoffeeButtonClick)
 buttonFireplace.addEventListener('click', handleFireplaceButtonClick)
+
 
 function handleForestButtonClick(e) {
 
@@ -225,33 +227,57 @@ function handleButtonPlayClick() {
 }
 
 // fazer uma função de timeout que diminui os segundos
-  // pegar os segundos da tela
-  // diminuir 1
-  // atualizar o segundo da tela
-  // faz de novo
+// pegar os segundos da tela
+// diminuir 1
+// atualizar o segundo da tela
+// faz de novo
 
-  let timerTimeOut
+// fazer diminuir também os minutos
+// trazer os minutos da tela pra cá
+// é preciso diminuir 1 dos minutos quando os segundos for pra 60
+// atualiza na tela
+
+// fazer a função parar quando o tempo acaba
+
+// consertar problemas
+
   const displaySeconds = document.querySelector('.seconds')
+  let timerTimeOut
   let seconds
    
 function countdown() {
-  timerTimeOut = setTimeout(function() {
+  timerTimeOut = setTimeout(() => {
     seconds = Number(displaySeconds.textContent)
-    if(seconds == 0) {
-      seconds = 60
+    minutes = Number(displayMinutes.textContent)
+
+    // colocar áudio do fim
+    if(minutes == 0 && seconds == 0) {
+      resetTimer()
+      audioAlert.play()
+      return
     }
 
+    if(seconds == 0) {
+      seconds = 60
+      displayMinutes.textContent = String(minutes - 1).padStart(2, '0')
+    }
+    
     displaySeconds.textContent = String(seconds - 1).padStart(2, '0')
 
     countdown()
 
   }, 1000)
 
-  
 }
 
-// fazer diminuir também os minutos
-// fazer a função parar quando o tempo acaba
+
 // fazer o botão stop funcionar
-// consertar problemas
-// colocar áudio do fim
+const buttonStop = document.querySelector('.stopButton')
+
+buttonStop.addEventListener('click', resetTimer)
+
+function resetTimer() {
+  clearTimeout(timerTimeOut)
+  displayMinutes.textContent = 25
+  displaySeconds.textContent = String(0).padStart(2, '0')
+}
