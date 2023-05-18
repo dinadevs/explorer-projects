@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-text: "Roboto", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--ff-text);
+  font-size: 1.6rem;
+  max-height: 100%;
+  background-image: url(./images/universe-1.svg);
+  background: no-repeat top center/cover;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: #8d8d99;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.8rem;
+}

@@ -1,3 +1,25 @@
+import {
+  buttonCoffee,
+  buttonFireplace,
+  buttonForest,
+  buttonMinus,
+  buttonPlay,
+  buttonPlus,
+  buttonRain,
+  buttonStop,
+  buttonTheme,
+  displayMinutes,
+  displaySeconds,
+  root,
+  sliderCoffee,
+  sliderFireplace,
+  sliderForest,
+  sliderRain,
+  soundButtonsList,
+  svgMoon,
+  svgSun,
+} from "./elements.js"
+
 // *****    BOTÃO DE TEMA   ******
 
 
@@ -10,10 +32,7 @@
 // trazer também o svg sol e svg lua
 // trazer também o root
 
-const buttonTheme = document.querySelector('.toggleTheme')
-const svgSun = document.querySelector('.svgSun')
-const svgMoon = document.querySelector('.svgMoon')
-const root = document.querySelector(':root')
+
 
 
 // ADICIONAR EVENTO
@@ -45,19 +64,11 @@ buttonTheme.addEventListener('click', function () {
 // a variavel vai receber um querySelector('.classe')
 // criar constantes que recebem os áudios
 
-const buttonForest = document.querySelector('.buttonForest')
-const buttonRain = document.querySelector('.buttonRain')
-const buttonCoffee = document.querySelector('.buttonCoffee')
-const buttonFireplace = document.querySelector('.buttonFireplace')
-const soundButtonsList = document.querySelectorAll('#soundButtons button')
+
 const audioForest = new Audio('../assets/Floresta.wav');
 const audioRain = new Audio('../assets/Chuva.wav');
 const audioCoffee = new Audio('../assets/Cafeteria.wav');
 const audioFireplace = new Audio('../assets/Lareira.wav');
-const sliderForest = buttonForest.querySelector('input');
-const sliderRain = buttonRain.querySelector('input');
-const sliderCoffee = buttonCoffee.querySelector('input');
-const sliderFireplace = buttonFireplace.querySelector('input');
 const audioAlert = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true")
 
 audioForest.loop = true;
@@ -166,6 +177,10 @@ function handleFireplaceButtonClick(e) {
     });
   }
 }
+
+
+
+
 sliderForest.addEventListener('change', handleForestSliderChange);
 sliderRain.addEventListener('change', handleRainSliderChange);
 sliderCoffee.addEventListener('change', handleCoffeeSliderChange);
@@ -190,27 +205,42 @@ function handleFireplaceSliderChange(e) {
 
 // *****    CONTROLE MAIS E MENOS DOS MINUTOS  ******
 
-const displayMinutes = document.querySelector('.minutes')
 let minutes
-
-const buttonPlus = document.querySelector('.plusButton')
-const buttonMinus = document.querySelector('.minusButton')
 
 buttonMinus.addEventListener('click', handleButtonMinusClick)
 buttonPlus.addEventListener('click', handleButtonPlusClick)
 
 function handleButtonMinusClick() {
-  minutes = Number(displayMinutes.textContent)
+  minutes = getDisplayMinutes()
   
   if(minutes > 0) {
-    displayMinutes.textContent = String(minutes - 5).padStart(2, '0')
+    updateDisplayMinutes(minutes - 5)
   }
 }
 
 function handleButtonPlusClick() {
-  minutes = Number(displayMinutes.textContent)
+  minutes = getDisplayMinutes()
+  updateDisplayMinutes(minutes + 5)
+}
+
+function getDisplayMinutes() {
   
-  displayMinutes.textContent = String(minutes + 5).padStart(2, '0')
+  return Number(displayMinutes.textContent)
+}
+
+function updateDisplayMinutes(minutes) {
+
+  displayMinutes.textContent = String(minutes).padStart(2, '0')
+}
+
+function getDisplaySeconds() {
+  
+  return Number(displaySeconds.textContent)
+}
+
+function updateDisplaySeconds(seconds) {
+
+  displaySeconds.textContent = String(seconds).padStart(2, '0')
 }
 
 
@@ -218,13 +248,8 @@ function handleButtonPlusClick() {
 
 // fazer o botão play funcionar
 
-const buttonPlay = document.querySelector('.playButton')
 
-buttonPlay.addEventListener('click', handleButtonPlayClick)
-
-function handleButtonPlayClick() {
-  countdown()
-}
+buttonPlay.addEventListener('click', countdown)
 
 // fazer uma função de timeout que diminui os segundos
 // pegar os segundos da tela
@@ -241,14 +266,14 @@ function handleButtonPlayClick() {
 
 // consertar problemas
 
-  const displaySeconds = document.querySelector('.seconds')
+  
   let timerTimeOut
   let seconds
    
 function countdown() {
   timerTimeOut = setTimeout(() => {
-    seconds = Number(displaySeconds.textContent)
-    minutes = Number(displayMinutes.textContent)
+    seconds = getDisplaySeconds()
+    minutes = getDisplayMinutes()
 
     // colocar áudio do fim
     if(minutes == 0 && seconds == 0) {
@@ -259,10 +284,10 @@ function countdown() {
 
     if(seconds == 0) {
       seconds = 60
-      displayMinutes.textContent = String(minutes - 1).padStart(2, '0')
+      updateDisplayMinutes(minutes - 1)
     }
     
-    displaySeconds.textContent = String(seconds - 1).padStart(2, '0')
+    updateDisplaySeconds(seconds - 1)
 
     countdown()
 
@@ -272,12 +297,14 @@ function countdown() {
 
 
 // fazer o botão stop funcionar
-const buttonStop = document.querySelector('.stopButton')
+
 
 buttonStop.addEventListener('click', resetTimer)
 
 function resetTimer() {
   clearTimeout(timerTimeOut)
-  displayMinutes.textContent = 25
-  displaySeconds.textContent = String(0).padStart(2, '0')
+  updateDisplayMinutes(25)
+  updateDisplaySeconds(0)
 }
+
+// 283
