@@ -6,7 +6,7 @@ export class Router {
     }
     
     route(event) {
-      event = event || window.event
+      event = event || window.event //verificar se o evento foi passado se não pega o evento q ta na janela
       event.preventDefault()
   
       window.history.pushState({}, "", event.target.href)
