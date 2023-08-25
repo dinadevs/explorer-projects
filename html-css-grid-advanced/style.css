@@ -17,16 +17,19 @@
   --color-gray-900: #202024;
 }
 
-html, body, input {
+html, 
+body, 
+input {
     font-family: "Mulish", sans-serif;
 }
 
 body {
   font-size: 1.6rem;
+  background-color: var(--color-white);
   color: var(--color-gray-900);
 }
 
-.app {
+#app {
   display: grid;
   grid-template-rows: max-content 1fr max-content;
   height: 100vh;
@@ -66,7 +69,7 @@ ul li.active {
     color: var(--color-gray-900);
 }
 
-.inputWrapper label{
+.inputWrapper label {
     width: 1px;
     height: 1px;
     overflow: hidden;
@@ -100,16 +103,62 @@ ul li.active {
       lightgray 0px -3.049px / 100% 149.817% no-repeat;
   }
 
-footer {
-    display: flex;
-    width: 144.0rem;
-    height: 6.9rem;
-    gap: 1.0rem;
-    flex-shrink: 0;
-    flex-direction: column;
-    justify-content: center;
+/*galeria*/
 
-    background: var(--color-white);
+main h1 {
+  font-size: 2.4rem;
+  padding-top: 1.6rem;
+}
+
+.gallery {
+  margin-top: 3.2rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+}
+
+.item {
+  background-color: var(--color-white);
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.item img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+
+  transition: all 1s ease-out;
+}
+
+.item img:hover {
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+  transform: scale(1.2);
+}
+
+.details {
+  padding: 2.2rem;
+  background-color: var(--color-white);
+  z-index: 1;
+  position: relative;
+}
+
+.details h2 {
+  font-size: 1.8rem;
+}
+
+.tags {
+  margin-top: 1.2rem;
+}
+
+.tags span {
+  padding: 0.6rem;
+  background-color: var(--color-gray-100);
+  border-radius: 0.4rem;
+
+  line-height: 0;
+  font-size: 1.2rem;
 }
 
 footer p {
@@ -118,3 +167,4 @@ footer p {
 
     padding: 1.6rem;
 }
+
