@@ -1,113 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+  <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photo blog</title>
     <link
-    href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap"
-    rel="stylesheet"
- />
-    <link rel="stylesheet" href="./style.css">
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div id="app">
-        <header class="container">
-            <nav>
-                <img class="logo" src="./assets/camera.svg" alt="logomarca, imagem de uma camera">
+      <header class="container">
+        <nav>
+          <img
+            class="logo"
+            src="./assets/camera.svg"
+            alt="logomarca, imagem de uma camera"
+          />
 
-                <ul>
-                    <li>Home</li>
-                    <li class="active">Galeria</li>
-                </ul>
-            </nav>
+          <ul>
+            <li>Home</li>
+            <li class="active">Galeria</li>
+          </ul>
+        </nav>
 
-            <form>
-                <div class="inputWrapper">
-                    <label for="search">Pesquise por imagens e coleções</label>
-                        <input id="search" type="text" placeholder="Pesquise por imagens e coleções">
+        <form>
+          <div class="inputWrapper">
+            <label for="search">Pesquise por imagens e coleções</label>
+            <input
+              id="search"
+              type="text"
+              placeholder="Pesquise por imagens e coleções"
+            />
+          </div>
+        </form>
+
+        <img
+          class="avatar"
+          src="./assets/avatar.jpg"
+          alt="imagem de um rapaz com capuz com um tablete na mão"
+        />
+      </header>
+
+      <main>
+        <div class="container">
+          <h1>Galeria</h1>
+          <section class="gallery">
+            <figure class="item">
+              <img src="https://source.unsplash.com/random?a=1" alt="" />
+              <figcaption class="details">
+                <h2>A fotografia é uma forma de ficção</h2>
+                <div class="tags">
+                  <span>TAG</span>
                 </div>
-            </form>
+              </figcaption>
+            </figure>
 
-            <img class="avatar" src="./assets/wallpaper.jpg" alt="imagem de um rapaz com capuz com um tablete na mão">
+            <figure class="item" style="--delay: 0.6s">
+              <img src="https://source.unsplash.com/random?b=1" alt="" />
+              <figcaption class="details">
+                <h2>A cada fotografia uma história</h2>
+                <div class="tags">
+                  <span>TAG</span>
+                </div>
+              </figcaption>
+            </figure>
 
-        </header>
-    
-        <main>
-            <div class="container">
-                <h1>Galeria</h1>
-                <section class="gallery" >
-                    <figure class="item">
-                        <img src="https://source.unsplash.com/random?a=1" alt="">
-                        <figcaption class="details">
-                            <h2>Cada instante é sempre</h2>
-                            <div class="tags">
-                                <span>TAG</span>
-                            </div>
-                        </figcaption>
-                    </figure>
+            <figure class="item" style="--delay: 0.8s">
+              <img src="https://source.unsplash.com/random?c=1" alt="" />
+              <figcaption class="details">
+                <h2>Fotografias, tradução em imagens</h2>
+                <div class="tags">
+                  <span>TAG</span>
+                </div>
+              </figcaption>
+            </figure>
 
-                    <figure class="item">
-                        <img src="https://source.unsplash.com/random?b=1" alt="">
-                        <figcaption class="details">
-                            <h2>Seja estranho</h2>
-                            <div class="tags">
-                                <span>TAG</span>
-                            </div>
-                        </figcaption>
-                    </figure>
+            <figure class="item" style="--delay: 1s">
+              <img src="https://source.unsplash.com/random?d=1" alt="" />
+              <figcaption class="details">
+                <h2>A fotografia paralisa o tempo</h2>
+                <div class="tags">
+                  <span>TAG</span>
+                </div>
+              </figcaption>
+            </figure>
 
-                    <figure class="item">
-                        <img src="https://source.unsplash.com/random?c=1" alt="">
-                        <figcaption class="details">
-                            <h2>Seja aleatório</h2>
-                            <div class="tags">
-                                <span>TAG</span>
-                            </div>
-                        </figcaption>
-                    </figure>
+            <figure class="item" style="--delay: 1.2s">
+              <img src="https://source.unsplash.com/random?e=1" alt="" />
+              <figcaption class="details">
+                <h2>A cada fotografia uma emoção</h2>
+                <div class="tags">
+                  <span>TAG</span>
+                </div>
+              </figcaption>
+            </figure>
 
-                    <figure class="item">
-                        <img src="https://source.unsplash.com/random?d=1" alt="">
-                        <figcaption class="details">
-                            <h2>Seja quem você é</h2>
-                            <div class="tags">
-                                <span>TAG</span>
-                            </div>
-                        </figcaption>
-                    </figure>
+            <figure class="item" style="--delay: 1.4s">
+              <img src="https://source.unsplash.com/random?f=1" alt="" />
+              <figcaption class="details">
+                <h2>Cada fotografia é uma arte</h2>
+                <div class="tags">
+                  <span>TAG</span>
+                </div>
+              </figcaption>
+            </figure>
+          </section>
+        </div>
+      </main>
 
-                    <figure class="item">
-                        <img src="https://source.unsplash.com/random?e=1" alt="">
-                        <figcaption class="details">
-                            <h2>Tudo é uma escolha</h2>
-                            <div class="tags">
-                                <span>TAG</span>
-                            </div>
-                        </figcaption>
-                    </figure>
-
-                    <figure class="item">
-                        <img src="https://source.unsplash.com/random?f=1" alt="">
-                        <figcaption class="details">
-                            <h2>Somos instantes</h2>
-                            <div class="tags">
-                                <span>TAG</span>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </section>
-            </div>
-        </main>
-    
-        <footer class="container">
-            <p>© 2023 - Rocketseat Explorer</p>
-        </footer>
+      <footer class="container">
+        <p>© 2023 - Fotografia laços invisíveis</p>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
