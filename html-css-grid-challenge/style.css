@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  :root {
+    font-size: 62.5%;
+  }
+
+  .app > * {
+    border: 1px solid white;
+  }
+
+  .app {
+    display: grid;
+    grid-template-areas: 
+    "A A A "
+    "B B C"
+    "D D D";
+    height: 100vh;
+
+    column-gap: 34px;
+  }
+
+  .app header{
+    grid-area: A;
+  }
+
+  .app main{
+    grid-area: B;
+  }
+
+  .app aside{
+    grid-area: C;
+  }
+
+  .app footer{
+    grid-area: D;
+  }
+
+  .avatar {
+    width: 4.2rem;
+    height: 4.2rem;
+  
+    object-fit: cover;
+  
+    border-radius: 50%;
+  }
