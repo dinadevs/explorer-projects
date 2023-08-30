@@ -1,51 +1,124 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  :root {
-    font-size: 62.5%;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  .app > * {
-    border: 1px solid white;
-  }
+:root {
+  font-size: 62.5%;
 
-  .app {
-    display: grid;
-    grid-template-areas: 
+  --bg-primary: #f4fcff;
+  --bg-secondary: #387e96;
+  --bg-input: rgba(255, 255, 255, 0.2);
+  --color-base: #fff;
+  --color-txt: #121214;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--bg-primary);
+  color: var(--color-txt);
+}
+
+
+.app > * {
+  border: 1px solid white;
+}
+
+.app {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  grid-template-areas:
     "A A A "
     "B B C"
     "D D D";
-    height: 100vh;
+  height: 100vh;
 
-    column-gap: 34px;
-  }
+  column-gap: 34px;
+}
 
-  .app header{
-    grid-area: A;
-  }
+.app header {
+  grid-area: A;
+}
 
-  .app main{
-    grid-area: B;
-  }
+.app main {
+  grid-area: B;
+}
 
-  .app aside{
-    grid-area: C;
-  }
+.app footer {
+  grid-area: D;
+}
 
-  .app footer{
-    grid-area: D;
-  }
+header {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  font-weight: 700;
+  background-color: var(--bg-secondary);
+}
 
-  .avatar {
-    width: 4.2rem;
-    height: 4.2rem;
-  
-    object-fit: cover;
-  
-    border-radius: 50%;
-  }
+header form {
+  flex: 1;
+}
+
+.content {
+  padding: 4.4rem 11.0rem;
+  display: flex;
+  background-color: var(--bg-primary);
+  overflow-y: scroll;
+}
+
+.inputWrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.inputWrapper input {
+  font-size: 1.6rem;
+  font-weight: 600;
+  width: 100%;
+  padding: 1.2rem 1.6rem;
+
+  background-color: var(--bg-input);
+  border: 0;
+  border-radius: 0.4rem;
+}
+
+.inputWrapper input::placeholder {
+  opacity: 0.56;
+  color: var(--color-base);
+}
+
+.avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+.container {
+  padding: 1.2rem;
+  width: min(112rem, 100%);
+  margin: 0 auto;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.2rem;
+}
+
+footer {
+  text-align: center;
+  font-weight: 600;
+
+  padding: 1.6rem;
+}
