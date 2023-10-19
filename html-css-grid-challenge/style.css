@@ -24,11 +24,11 @@ body {
 }
 
 
-.app > * {
+.layout > * {
   border: 1px solid white;
 }
 
-.app {
+.layout {
   display: grid;
   grid-template-rows: max-content 1fr max-content;
   grid-template-areas:
@@ -40,15 +40,15 @@ body {
   column-gap: 34px;
 }
 
-.app header {
+.layout header {
   grid-area: A;
 }
 
-.app main {
+.layout main {
   grid-area: B;
 }
 
-.app footer {
+.layout footer {
   grid-area: D;
 }
 
@@ -121,4 +121,8 @@ footer {
   font-weight: 600;
 
   padding: 1.6rem;
+}
+
+@media screen {
+  
 }
