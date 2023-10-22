@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Github Favorites</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;900&family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="js/main.js" type="module" defer></script>
+
 </head>
+
 <body>
     <div id="app">
         <header>
-            <h1>Github Favorites</h1>
+            <h1>Github FavoriteS</h1>
             <div class="search">
-                <label for="inputSearch">Github user</label>
+                <label class="sr-only" for="inputSearch">Github user</label>
                 <input id="inputSearch" type="text" placeholder="Github user">
-                <button>&plus;</button>
+                <button>&times;</button>
             </div>
         </header>
         <table>
@@ -27,20 +38,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td class="user">
-                        <img src="https://github.com/dinadevs.png" alt="imagem Edna ">
-                        <a href="https://github.com/dinadevs" target="_blank">
-                            <p>Edna Martins</p>
-                            <span>dinadevs</span>
-                        </a>
-                    </td>
-                    <td class="repositories"></td>
-                    <td class="followers"></td>
-                    <td>
-                        <button>&times;</button>
-                    </td>
-                </tr>
+            
 
                 <tr>
                     <td class="user">
