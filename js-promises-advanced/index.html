@@ -7,39 +7,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Github Favorites</title>
+    <title>Git Fav</title>
     
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;900&family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <script src="js/main.js" type="module" defer></script>
-
 </head>
 
 <body>
     <div id="app">
         <header>
-            <h1>Github FavoriteS</h1>
+            <h1>
+                <img src="assets/gFav.svg" alt="" />
+              </h1>
             <div class="search">
                 <label class="sr-only" for="inputSearch">Github user</label>
                 <input id="inputSearch" type="text" placeholder="Github user">
-                <button>&times;</button>
+                <button>&star;</button>
             </div>
         </header>
         <table>
             <thead>
                 <tr>
-                    <th>
                         <th>User</th>
                         <th>Repository</th>
                         <th>Followers</th>
                         <th>Action</th>
-                    </th>
                 </tr>
             </thead>
             <tbody>
-            
-
                 <tr>
                     <td class="user">
                         <img src="https://github.com/SeveroDeveloper.png" alt="Imagem Amanda">
@@ -51,7 +48,7 @@
                     <td class="repositories"></td>
                     <td class="followers"></td>
                     <td>
-                        <button>&times;</button>
+                        <button class="remove">&times;</button>
                     </td>
                 </tr>
 
@@ -66,7 +63,7 @@
                     <td class="repositories"></td>
                     <td class="followers"></td>
                     <td>
-                        <button>&times;</button>
+                        <button class="remove">&times;</button>
                     </td>
                 </tr>
 
@@ -81,10 +78,9 @@
                     <td class="repositories"></td>
                     <td class="followers"></td>
                     <td>
-                        <button>&times;</button>
+                        <button class="remove">&times;</button>
                     </td>
                 </tr>
-
             </tbody>
         </table>
     </div>

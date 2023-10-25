@@ -1,151 +1,176 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    font-size: 62.5%;
+  font-size: 62.5%;
 
-    --ff-primary: 'Poppins', sans-serif;
-    --txt-color: #E1E1E6;
+  --ff-primary: "Poppins", sans-serif;
+  --txt-primary: #e1e1e6;
+  --txt-secundary: #7D8590;
 
-    --hue: 194;
-    --primary-color: hsl(var(--hue), 72%, 13%)
+  --hue: 231;
+  --primary-color: hsl(var(--hue), 13%, 16%);
+  color: hsl(230, 13%, 18%);
+  
 }
 
 body {
-    font-size: 1.6rem;
-    color: var(--txt-color);
-    background-color: rgb(6, 24, 28);
+  font-size: 1.6rem;
+  color: var(--txt-primary);
+  background-color: #1F2328;
 }
 
 body * {
-    font-family: var(--ff-primary);
+  font-family: var(--ff-primary);
 }
 
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0 0, 0 0, 0 0);
-    border: 0;
-    white-space: nowrap;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
 }
 
 #app {
-    padding: 3rem;
-    max-width: 500px;
-    margin: 0 auto;
+  padding: 3rem;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 2.5rem 0;
 }
 
 header h1 {
-    font-size: 2rem;
-    text-transform: uppercase;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+header p {
+  text-align: center;
+  
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; 
+  text-transform: uppercase;
 }
 
 .search {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 
 .search input {
-    height: 3.2rem;
-    border: 1px solid #ccc;
-    border-radius: .4rem 0 0 .4rem;
-    padding: 0 .8rem;
+  height: 3.2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem 0 0 0.4rem;
+  padding: 0 0.8rem;
 }
 
 .search button {
-    color: var(--txt-color);
-    background-color: var(--primary-color);
-    border-radius: 0 .4rem .4rem 0 ;
-    height: 3.2rem;
+  color: var(--txt-primary);
+  background-color: var(--primary-color);
+  border-radius: 0 0.4rem 0.4rem 0;
+  height: 3.2rem;
+  border: 1px solid var(--txt-primary);
+  padding: 0 8.0rem;
+
+  cursor: pointer;
 }
 
 .search button:hover {
-    filter: brightness(1.1);
-  }
+  filter: brightness(1.1);
+}
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
+table {
+  width: 100%;
+  border-collapse: collapse;
 
-    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
-  }
+  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
 
-  table * {
-    font-size: 1.4rem;
-    color: var(--text-color);
-  }
+table * {
+  font-size: 1.4rem;
+  color: var(--txt-primary);
+}
 
-  table th {
-    background: var(--primary-color);
-    text-align: left;
-    font-weight: normal;
-    padding: 1.5rem;
-  }
+table th {
+  color: var(--txt-secundary);
+  background: var(--primary-color);
+  text-align: left;
+  font-weight: normal;
+  padding: 1.5rem;
+}
 
-  table th:first-child {
-    border-top-left-radius: .4rem;
-  }
+table th:first-child {
+  border-top-left-radius: 0.4rem;
+}
 
-  table th:last-child {
-    border-top-right-radius: .4rem;
-  }
+table th:last-child {
+  border-top-right-radius: 0.4rem;
+}
+
+table tr {
+  border: 1px solid;
+  border-color: #C9D1C9;
+}
 
 table tr:nth-child(odd) {
-    background: #ddd;
+  background: #1F2328;
 }
 
 table tr:nth-child(even) {
-    background: #eee;
+  background: hsl(230, 11%, 21%);
 }
 
-  table td {
-    padding: 1.5rem;
-    text-align: left;
-  }
+table td {
+  padding: 1.5rem;
+  text-align: left;
+}
 
-  td.user {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
-  td.user img {
-    width: 5rem;
-    height: 5rem;
-    object-fit: cover;
-    border-radius: 50%;
-  }
+td.user img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
 
-  td.user a {
-    text-decoration: none;
-  }
+td.user a {
+  text-decoration: none;
+}
 
-  td.user a p {
-    font-weight: bold;
-  }
+td.user a p {
+  font-weight: bold;
+}
 
-  td .remove {
-    background: none;
-    border: none;
-    color: red;
-  }
+td.user span {
+  color: var(--txt-secundary);
+}
 
+td .remove {
+  background: none;
+  border: none;
+  color: red;
 
-
-
-
+  cursor: pointer;
+}
