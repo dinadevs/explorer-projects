@@ -9,18 +9,18 @@
 
   --ff-primary: "Poppins", sans-serif;
   --txt-primary: #e1e1e6;
-  --txt-secundary: #7D8590;
+  --txt-secundary: #7d8590;
+  --bg-color: hsl(213, 13%, 14%);
+  --bg-secundary: hsl(230, 11%, 21%);
 
   --hue: 231;
   --primary-color: hsl(var(--hue), 13%, 16%);
-  color: hsl(230, 13%, 18%);
-  
 }
 
 body {
   font-size: 1.6rem;
   color: var(--txt-primary);
-  background-color: #1F2328;
+  background-color: var(--bg-color);
 }
 
 body * {
@@ -40,41 +40,29 @@ body * {
 }
 
 #app {
-  padding: 3rem;
-  max-width: 500px;
-  margin: 0 auto;
+  max-width: 112rem;
+  margin: 11.5rem 16rem 11.6rem;
 }
 
 header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-
-  margin: 2.5rem 0;
+  padding-bottom: 8.7rem;
 }
 
-header h1 {
-  font-size: 2rem;
-  text-transform: uppercase;
-}
-
-header p {
-  text-align: center;
-  
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px; 
-  text-transform: uppercase;
+.soonFav {
+  width: 18rem;
+  height: 3.2rem;
 }
 
 .search {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: .5rem;
 }
 
 .search input {
+  width: 32.08vw;
   height: 3.2rem;
   border: 1px solid #ccc;
   border-radius: 0.4rem 0 0 0.4rem;
@@ -87,20 +75,26 @@ header p {
   border-radius: 0 0.4rem 0.4rem 0;
   height: 3.2rem;
   border: 1px solid var(--txt-primary);
-  padding: 0 8.0rem;
+  padding: 1rem 3.2rem;
+
+  display: flex;
+  align-items: center;
 
   cursor: pointer;
 }
 
 .search button:hover {
   filter: brightness(1.1);
+
+  transition: all 0.7s ease;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-
-  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1rem 2rem -1rem rgba(251, 250, 250, 0.3);
+  border: 1px solid var(--light-blue);
+  border-radius: 1.2rem;
 }
 
 table * {
@@ -126,15 +120,15 @@ table th:last-child {
 
 table tr {
   border: 1px solid;
-  border-color: #C9D1C9;
+  border-color: #c9d1c9;
 }
 
 table tr:nth-child(odd) {
-  background: #1F2328;
+  background: var(--bg-color);
 }
 
 table tr:nth-child(even) {
-  background: hsl(230, 11%, 21%);
+  background: var(--bg-secundary);
 }
 
 table td {
@@ -173,4 +167,30 @@ td .remove {
   color: red;
 
   cursor: pointer;
+}
+
+.noFavs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+
+  margin: 21rem auto;
+}
+
+.noFavs svg {
+  width: 13.2rem;
+  height: 12.5rem;
+}
+
+.noFavs h2 {
+  font-size: 4rem;
+  line-height: 2.5rem;
+
+  -webkit-filter: drop-shadow(0px 0px 20px rgba(251, 250, 250, 0.3));
+  filter: drop-shadow(0px 0px 20px rgba(251, 250, 250, 0.3));
+}
+
+.hide {
+  display: none;
 }

@@ -1,88 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Git Fav</title>
-    
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;900&family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;900&family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <script src="js/main.js" type="module" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="app">
-        <header>
-            <h1>
-                <img src="assets/gFav.svg" alt="" />
-              </h1>
-            <div class="search">
-                <label class="sr-only" for="inputSearch">Github user</label>
-                <input id="inputSearch" type="text" placeholder="Github user">
-                <button>&star;</button>
-            </div>
-        </header>
-        <table>
-            <thead>
-                <tr>
-                        <th>User</th>
-                        <th>Repository</th>
-                        <th>Followers</th>
-                        <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="user">
-                        <img src="https://github.com/SeveroDeveloper.png" alt="Imagem Amanda">
-                        <a href="https://github.com/SeveroDeveloper" target="_blank">
-                            <p>Amanda Severo</p>
-                            <span>SeveroDeveloper</span>
-                        </a>
-                    </td>
-                    <td class="repositories"></td>
-                    <td class="followers"></td>
-                    <td>
-                        <button class="remove">&times;</button>
-                    </td>
-                </tr>
+      <header>
+        <img class="soonFav" src="assets/gFav.svg" alt="Soon GitFav" />
 
-                <tr>
-                    <td class="user">
-                        <img src="https://github.com/ondanieldev.png" alt="Imagem Amanda">
-                        <a href="https://github.com/ondanieldev" target="_blank">
-                            <p>Daniel Oliveira</p>
-                            <span>ondanieldev</span>
-                        </a>
-                    </td>
-                    <td class="repositories"></td>
-                    <td class="followers"></td>
-                    <td>
-                        <button class="remove">&times;</button>
-                    </td>
-                </tr>
+        <div class="search">
+          <label class="sr-only" for="inputSearch"
+            >Enter the Github username</label
+          >
+          <input
+            id="inputSearch"
+            type="text"
+            placeholder="Enter the Github username"
+          />
+          <button>
+            <img class="soonStar" src="./assets/star.svg" alt="Soon of a star">  
+            FAVORITE
+          </button>
+        </div>
+      </header>
+      <table>
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Repository</th>
+            <th>Followers</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
 
-                <tr>
-                    <td class="user">
-                        <img src="https://github.com/dev-nagato.png" alt="Imagem Amanda">
-                        <a href="https://github.com/dev-nagato" target="_blank">
-                            <p>Pedro Martins</p>
-                            <span>dev-nagato</span>
-                        </a>
-                    </td>
-                    <td class="repositories"></td>
-                    <td class="followers"></td>
-                    <td>
-                        <button class="remove">&times;</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+      <div class="noFavs">
+        <img src="./assets/noFav.svg" alt="" />
+        <h2>No favorites yet</h2>
+      </div>
     </div>
-</body>
+  </body>
 </html>
